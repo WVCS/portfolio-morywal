@@ -1,0 +1,73 @@
+//stickman function (Max)
+function drawStickman() {
+  penDown();
+  moveForward(25);
+  turnLeft(130);
+  moveForward(10);
+  moveBackward(10);
+  turnRight(130);
+  turnRight(130);
+  moveForward(10);
+  moveBackward(10);
+  turnLeft (130);
+  moveForward(2);
+  turnLeft(90);
+  arcRight(180, 10);
+  arcRight(180, 10);
+  turnRight(90);
+  moveBackward(25);
+  turnLeft(160);
+  moveForward(10);
+  moveBackward(10);
+  turnRight(160);
+  turnRight(160);
+  moveForward (10);
+  moveBackward(10);
+  turnLeft(160);
+  penUp();
+}
+//Cannon  (Max)
+function drawCannon (){
+penDown();
+turnTo(0);
+turnLeft (90);
+arcLeft(360, 10);
+moveForward(25);
+turnLeft(90); 
+arcRight(90, 3);
+turnTo(0);
+moveForward(15);
+turnRight(90);
+arcRight(90, 3);
+turnTo(90);
+moveForward(30);
+turnTo(50);
+arcRight(180, 2);
+turnTo(120);
+moveForward(30);
+turnTo (80);
+arcRight(270, 3);
+turnTo (300);
+moveForward(30);
+turnTo (180);
+moveForward(3);
+turnTo (210);
+penUp();
+}
+//people on Left(on the left: 10<X<75)10-20 (Max)
+penUp();
+for (var i = 0; i < randomNumber(10, 20); i++) {
+  moveTo(randomNumber(10, 75),randomNumber(200, 450));
+  drawStickman ();
+}
+//people on right (on the right: 245<X<300)10-20 (Max)
+penUp();
+for (var i = 0; i < randomNumber(10, 20); i++) {
+  moveTo(randomNumber(245, 300),randomNumber(200, 450));
+  drawStickman ();
+}
+//Cannons on the right (Max)
+for (var i = 0; i < 3; i++) {
+moveTo(randomNumber(165, 200),randomNumber(200, 450));
+  drawCannon ();
+}
